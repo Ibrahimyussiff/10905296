@@ -1,42 +1,33 @@
 #include <iostream>
 using namespace std;
-
-bool isPrime(int e)
+bool isPrime(int a)
 {
-    if (e <= 1)
+    for (int i =2; i<a; i++)
     {
-        return false;
-    }
-
-    for (int i =2; i<e; i++)
-    {
-        if(e%i==0)
+        if(a%i==0)
         {
             return false;
         }
     }
-
     return true;
 }
-
 int main()
 {
     float sum=0.0;
     int c=0;
-    int e;
-    cout<<"type a number"<<endl;
-    cin>>e;
+    int a;
+    cout<<"enter any number"<<endl;
+    cin>>a;
 
-    for (int i=1; i<e; i++)
+    for (int i=1; i<a; i++)
     {
         if (isPrime(i))
         {
             sum+=i;
-            c+=1;
+            c++;
         }
     }
-
-    cout << "The sum of Prime numbers below " << e << " is " << sum <<endl;
-    float avg=sum/c;
-    cout<<"The average of the prime numbers is "<<avg<<endl;
+    float average=sum/c;
+    cout<<"The average of the prime numbers is "<<average<<endl;
 }
+/*Yussiff Ibrahim 
